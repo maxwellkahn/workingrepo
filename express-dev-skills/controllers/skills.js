@@ -1,12 +1,19 @@
 const Skill = require('../models/skill');
-const { router } = require('../server');
 
 module.exports = {
     index,
+    show,
 };
 
-router.get('/', function(req, res) {
+function index(req, res) {
     res.render('skills/index', {
-        skills: Skill.getAll()
+        skills: Skill.getAll(),
     });
-});
+}
+
+function show(req, res) {
+    res.render('skills/show', {
+        skill: Skill.getOne(req.params.id),
+        skillNum: parseInt(req.params.id) +1
+    });
+}
