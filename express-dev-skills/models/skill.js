@@ -11,6 +11,7 @@ module.exports = {
     getOne,
     create,
     deleteOne,
+    editOne
 };
 
 function getOne(id) {
@@ -27,4 +28,8 @@ function create(skill) {
 
 function deleteOne(id) {
     skills.splice(id, 1)
+}
+
+function editOne(id, body) {
+    skills[id] = body;
 }
