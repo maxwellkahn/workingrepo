@@ -11,9 +11,10 @@
     <ul>
       <% skills.forEach(function(t, idx) { %>
         <li>
-            <a href="/skills/ <%= idx %>"><%= t.skill %> </a>
+            <a href="/skills/<%= idx %>"><%= t.skill %> </a>
         </li>
       <% }); %>
     </ul>
+    <a href="/skills/new">Add a Skill</a>
 </body>
 </html>

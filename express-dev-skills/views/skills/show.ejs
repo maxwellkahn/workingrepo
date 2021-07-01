@@ -4,11 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Skill: <%= skill.skill %></title>
+		<title>Skill</title>
 	</head>
 	<body>
-        <h1>Skill #<%= skillNum %></h1>
+        <h1>Skill #<%= skillNum +1 %></h1>
         <h3><%= skill.skill %></h3>
         <h3>Proficient: <%= skill.proficient ? 'Yes' : 'No' %></h3>
+		<form action="/skills/<%= skillNum %>?_method=DELETE" method="POST">
+			<button type="submit">NO SKILLS</button>
+		</form>
 	</body>
 </html>
