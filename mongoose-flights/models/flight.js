@@ -8,14 +8,14 @@ const flightSchema = new Schema({
     },
     airport: {
         type: String,
-        enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']
+        enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
         default: 'DEN'
     },
     flightNo: {
         type: Number,
         min: 10,
         max: 9999
-    }
+    },
     departs: {
         type: Date,
         default: function() {
@@ -23,3 +23,5 @@ const flightSchema = new Schema({
         },
     }
 })
+
+module.exports = mongoose.model('Flight', flightSchema)

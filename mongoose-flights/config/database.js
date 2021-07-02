@@ -5,5 +5,3 @@ mongoose.connect('mongodb://localhost/flights', {
         useCreateIndex: true,
         useUnifiedTopology: true,
     });
-
-    module.exports = mongoose.model('Flight', flightSchema);
