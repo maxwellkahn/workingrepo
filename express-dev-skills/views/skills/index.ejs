@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Express Skill</title>
 </head>
 <body>
     <h1>Skills</h1>
     <ul>
-      <% skills.forEach(function(t, idx) { %>
+      <% skills.forEach(function(s, idx) { %>
         <li>
-            <a href="/skills/<%= idx %>"><%= t.skill %> </a>
+            <a href="/skills/<%= idx %>"><%= s.skill %> </a>
         </li>
       <% }); %>
     </ul>

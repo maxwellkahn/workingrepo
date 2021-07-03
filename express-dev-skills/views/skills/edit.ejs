@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Skill</title>
+    <title>Esxpress Skill</title>
 </head>
 <body>
     <h1>Edit Skill</h1>
-    <form action="/skills/<%= idx %>?_method=PUT" method="POST">
-        <input type="text" name="skill" value="<%= skill.skill %>">
+    <form action="/skills/<%= skillNum %>?_method=PUT" method="POST">
+        <input type="text" name="skill" value="<%= skill.skill %>"/>
+        <input type="checkbox" name="proficient" <%= skill.proficient ? 'checked' : '' %> >
         <button type="submit">Update Skill</button>
     </form>
 </body>
