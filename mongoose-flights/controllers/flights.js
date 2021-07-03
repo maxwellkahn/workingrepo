@@ -31,8 +31,7 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    res.render('flights/show', {
-        flight: Flight.getOne(req.params.id),
-        FlightNum: parseInt(req.params.id) + 1
+    Flight.findById(req.params.id, function(err, flight) {
+        res.render('flights/show', {title: 'Flight Detail', flight});
     });
 }

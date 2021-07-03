@@ -9,6 +9,10 @@
     <div><%= flight.flightNo %> </div>
     <div>Departs: </div>
     <div><%= flight.departs %> </div>
+    <div>Arrives: </div>
+    <div> <%= flight.destination.airport %></div>
+    <div>Arrival Date:</div>
+    <div><%= flight.destination.arrival %> </div>
 </section>
 
 <%- include('../partials/footer') %> 
