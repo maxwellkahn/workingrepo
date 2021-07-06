@@ -9,6 +9,10 @@
   <div><%= flight.flightNo %></div>
   <div>Departs:</div>
   <div><%= flight.departs %></div>
+  <div>Ticket:</div>
+  <ul>
+    <%- flight.ticket.map(t => `<li>${t.seat} <small>$ ${t.price}</small></li>`).join('') %> 
+  </ul>
 </section>
 <% if (flight.destinations.length > 0) { %> 
 <br />
