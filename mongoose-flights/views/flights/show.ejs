@@ -11,7 +11,7 @@
   <div><%= flight.departs %></div>
   <div>Ticket:</div>
   <ul>
-    <%- flight.ticket.map(t => `<li>${t.seat} <small>$ ${t.price}</small></li>`).join('') %> 
+    <%- tickets.map(t => `<li>${t.seat} <small>$ ${t.price}</small></li>`) %> 
   </ul>
 </section>
 <% if (flight.destinations.length > 0) { %> 
@@ -54,5 +54,7 @@
   <br />
   <input type="submit" value="Add Destination" />
 </form>
+
+<a href='/flights/<%= flight._id %>/tickets/new'>New Ticket</a>
 
 <%- include('../partials/footer') %>
